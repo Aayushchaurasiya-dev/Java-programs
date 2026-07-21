@@ -1,0 +1,20 @@
+//2-to print total and percentage of 3 subject
+import java.util.Scanner;
+public class main{
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    System.out.print("enter math marks : ");
+    int math = sc.nextInt();
+    System.out.print("enter english marks : ");
+    int eng= sc.nextInt();
+    System.out.print("enter hindi0 marks : ");
+    int hin = sc.nextInt();
+    int total = math+eng+hin;
+    float per = (float)total/3;
+    System.out.println("total : "+total);
+    System.out.println("percentage : "+per);
+    
+    
+    
+}
+}
