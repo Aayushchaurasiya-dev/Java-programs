@@ -1,0 +1,20 @@
+// To find how many even and odd number in an array
+import java.util.Scanner;
+public class main{
+    public static void main(String[]args ){
+    Scanner sc = new Scanner(System.in);
+    int even= 0,odd=0;
+     int arr[]= new int[10];
+     System.out.print("enter element : ");
+     for(int i = 0;i<arr.length;i++){
+         arr[i]= sc.nextInt();
+         if (arr[i]%2==0) even++;
+         else odd++;
+            }
+        System.out.println("number of even number in array : "+even);
+        System.out.println("number of odd number in array : "+odd);
+     
+        
+    }
+}
+
