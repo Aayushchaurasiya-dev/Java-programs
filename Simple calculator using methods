@@ -1,0 +1,53 @@
+//Simple calculator using function
+import java.util.Scanner;
+public class Main {
+	static void add(){
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("enter 1st num : ");
+		float a = sc.nextInt();
+		System.out.print("enter 2nd num : ");
+		float b = sc.nextInt();
+	    System.out.println("Sum : "+(a+b));
+	}
+	static void sub(){
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("enter 1st num : ");
+		float a = sc.nextInt();
+		System.out.print("enter 2nd num : ");
+		float b = sc.nextInt();
+	    System.out.println("Difference : "+(a-b));
+	}
+	static void mul(){
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("enter 1st num : ");
+		float a = sc.nextInt();
+		System.out.print("enter 2nd num : ");
+		float b = sc.nextInt();
+	    System.out.println("Product : "+(a*b));
+	}
+	static void div(){
+	    Scanner sc = new Scanner(System.in);
+		System.out.print("enter 1st num : ");
+		float a = sc.nextInt();
+		System.out.print("enter 2nd num : ");
+		float b = sc.nextInt();
+	    System.out.println("Division : "+(a/b));
+	}
+	
+	public static void main(String[] args) {
+	    System.out.println("*****BASIC._.CALCULATOR*****");
+
+		while(true){
+		  Scanner sc = new Scanner(System.in);
+		System.out.print("1.ADD\n2.SUBTRACTION\n3.MULTIPLICATION\n4.DIVISION\n5.EXIT\nChoose option : ");
+		int n = sc.nextInt();
+		if (n== 1 ) add();
+		else if (n== 2) sub();
+		else if (n==3) mul();
+		else if (n==4 )div();
+		else if (n==5) break;
+		else System.out.println("invalid option ");
+		    	}	
+				
+	}
+}
