@@ -1,0 +1,52 @@
+// Personal Bank managment system using class and object
+import java.util.Scanner;
+class Bank{
+    Scanner sc = new Scanner(System.in);
+    String acname;
+    long acnum,bal =0;
+    public Bank(String name,long num){
+        acname= name;
+        acnum= num;
+    }
+    void credit(){
+        System.out.print("Enter ammount : ");
+        long n = sc.nextLong();
+        bal+=n;
+        System.out.println(n+" is credited to your account ");
+    }
+    void debit(){
+        System.out.print("Enter ammount : ");
+        long n= sc.nextLong();
+        bal-=n;
+        System.out.println(n+" is debited to your account ");
+    }
+    void show(){
+        System.out.println("Account holder name : "+acname);
+        System.out.println("Account number : "+acnum);
+        System.out.println("Balance : "+bal);
+    }
+    
+}
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("enter your name : ");
+        String name = sc.nextLine();
+        System.out.print("enter your account number : ");
+        long acnum = sc.nextLong();
+        Bank b = new Bank(name,acnum);
+        while(true){
+            System.out.print("1.CREDIT\n2.DEBIT\n3.SHOW\n4.EXIT\nChoose option : ");
+            int n=sc.nextInt();
+            if (n==1) b.credit();
+            else if (n==2) b.debit();
+            else if (n==3) b.show();
+            else if (n==4){ System.out.println("Thank you"); break;
+                
+            }
+            else System.out.println("INVALID INPUT ");
+        }
+        
+        
+    }
+}
