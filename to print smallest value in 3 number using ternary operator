@@ -1,0 +1,16 @@
+// to print smallest value in 3 number using ternary operator
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("enter 1st num : ");
+		int a = sc.nextInt();
+		System.out.print("enter 2nd num : ");
+		int b = sc.nextInt();
+		System.out.print("enter 3rd num : ");
+		int c = sc.nextInt();
+		int result = (a<b)?(a<c)?a:c:(b<c)?b:c;
+	    System.out.println(result +" is smallest ");
+	}
+	
+}
