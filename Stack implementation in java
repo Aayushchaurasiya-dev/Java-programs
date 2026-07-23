@@ -1,0 +1,55 @@
+// Stack implementation 
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       Stack s = new Stack();
+       System.out.println("*****STACK*****");
+       while(true){
+           System.out.print("1.PUSH\n2.POP\n3.SHOW\n4.EXIT\nChoose option : ");
+           int n = sc.nextInt();
+           if(n==1){
+               System.out.print("Enter the element : ");
+               int p = sc.nextInt();
+               s.push(p);
+           }
+           else if(n==2) s.pop();
+           else if(n==3) s.show();
+           else if(n==4) break;
+           else System.out.println("Invalid input");
+           }
+    }
+}
+class Stack{
+    int arr[]= new int[5];
+    int top = -1;
+    void push(int n){
+        if(top == 4){
+            System.out.println("Stack overflow ");
+        }
+        else{
+          top++;
+          arr[top]=n;
+            System.out.println(n+" is added to stack ");
+            
+        }
+    }
+    void pop(){
+        if(top == -1){
+            System.out.println("Stack underflow");
+        }
+        else{
+            System.out.println(arr[top]+" is removed from stack ");
+            top--;
+        }
+    }
+    void show(){
+        if(top==-1) System.out.println("stack is empty ");
+        else{
+        System.out.println("Stack elements are : ");
+        for(int i =0 ;i<=top;i++){
+            System.out.print(arr[i]+"\t");
+        }
+        }
+    }
+}
